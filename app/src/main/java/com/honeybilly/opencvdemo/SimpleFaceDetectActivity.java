@@ -22,7 +22,7 @@ import io.reactivex.disposables.CompositeDisposable;
 /**
  * Created by liqi on 17:26.
  */
-public class CameraActivity extends AppCompatActivity implements CvCameraViewListener2 {
+public class SimpleFaceDetectActivity extends AppCompatActivity implements CvCameraViewListener2 {
 
     private JavaCameraView cameraView;
     private int cameraIndex = 1;

@@ -5,7 +5,6 @@ import android.Manifest.permission;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -28,13 +27,10 @@ import android.widget.Toast;
 import com.honeybilly.opencvdemo.utils.BitmapUtils;
 import com.honeybilly.opencvdemo.utils.FileUtils;
 import com.honeybilly.opencvdemo.utils.ImageUtils;
-import com.honeybilly.opencvdemo.utils.LocalProcesser;
 
 import org.opencv.android.OpenCVLoader;
-import org.opencv.android.Utils;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
-import org.opencv.imgproc.Imgproc;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -222,13 +218,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-            CP1Activity.launch(this);
+            MatCreateActivity.launch(this);
         } else if (id == R.id.nav_gallery) {
-            CP3Activity.launch(this);
+            SimpleTransFormActivity.launch(this);
         } else if (id == R.id.nav_slideshow) {
-            CP4Activity.launch(this);
+            FilterActivity.launch(this);
         } else if (id == R.id.nav_manage) {
-            CP5Activity.launch(this);
+            FeatureDetectionActivity.launch(this);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
@@ -244,7 +240,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @NeedsPermission({permission.CAMERA, permission.WRITE_EXTERNAL_STORAGE})
     void startCameraActivity() {
-        Intent intent = new Intent(this, CameraActivity.class);
+        Intent intent = new Intent(this, SimpleFaceDetectActivity.class);
         startActivity(intent);
     }
 

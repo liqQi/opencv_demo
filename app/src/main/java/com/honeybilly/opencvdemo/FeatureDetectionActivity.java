@@ -1,6 +1,5 @@
 package com.honeybilly.opencvdemo;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -42,13 +41,13 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * Created by liqi on 14:25.
  */
-public class CP5Activity extends CP4Activity {
+public class FeatureDetectionActivity extends FilterActivity {
 
 
     private CascadeClassifier cascadeClassifier;
 
     public static void launch(Context context) {
-        Intent intent = new Intent(context, CP5Activity.class);
+        Intent intent = new Intent(context, FeatureDetectionActivity.class);
 
         context.startActivity(intent);
     }
@@ -65,8 +64,8 @@ public class CP5Activity extends CP4Activity {
         ivSrc2 = findViewById(R.id.src2);
         ivDes = findViewById(R.id.des);
         etScale = findViewById(R.id.scale);
-        findViewById(R.id.select_1).setOnClickListener(v -> ImageUtils.requestImage(CP5Activity.this, REQUEST_IMAGE));
-        findViewById(R.id.select_2).setOnClickListener(v -> ImageUtils.requestImage(CP5Activity.this, REQUEST_IMAGE_2));
+        findViewById(R.id.select_1).setOnClickListener(v -> ImageUtils.requestImage(FeatureDetectionActivity.this, REQUEST_IMAGE));
+        findViewById(R.id.select_2).setOnClickListener(v -> ImageUtils.requestImage(FeatureDetectionActivity.this, REQUEST_IMAGE_2));
         findViewById(R.id.transform_1).setOnClickListener(v -> displayHistogram());
         findViewById(R.id.transform_2).setOnClickListener(v -> faceDetect());
     }
@@ -274,9 +273,9 @@ public class CP5Activity extends CP4Activity {
     }
 
     private static class InnerHandler extends Handler {
-        private WeakReference<CP5Activity> activityRef;
+        private WeakReference<FeatureDetectionActivity> activityRef;
 
-        public InnerHandler(CP5Activity activity) {
+        public InnerHandler(FeatureDetectionActivity activity) {
             activityRef = new WeakReference<>(activity);
         }
 
@@ -294,7 +293,7 @@ public class CP5Activity extends CP4Activity {
             }
         }
 
-        private CP5Activity getActivity() {
+        private FeatureDetectionActivity getActivity() {
             if (activityRef != null) {
                 if (activityRef.get() != null) {
                     return activityRef.get();

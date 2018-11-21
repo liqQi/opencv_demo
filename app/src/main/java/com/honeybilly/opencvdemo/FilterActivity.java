@@ -7,7 +7,6 @@ import android.graphics.Bitmap.Config;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,7 +17,6 @@ import com.honeybilly.opencvdemo.utils.ImageUtils;
 
 import org.opencv.android.Utils;
 import org.opencv.core.Core;
-import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.core.Size;
@@ -37,12 +35,12 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * Created by liqi on 14:22.
  */
-public class CP4Activity extends AppCompatActivity {
+public class FilterActivity extends AppCompatActivity {
 
     protected CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     public static void launch(Context context) {
-        Intent intent = new Intent(context, CP4Activity.class);
+        Intent intent = new Intent(context, FilterActivity.class);
 
         context.startActivity(intent);
     }
@@ -69,8 +67,8 @@ public class CP4Activity extends AppCompatActivity {
         ivDes = findViewById(R.id.des);
         etScale = findViewById(R.id.scale);
         tvMsg = findViewById(R.id.msg);
-        findViewById(R.id.select_1).setOnClickListener(v -> ImageUtils.requestImage(CP4Activity.this, REQUEST_IMAGE));
-        findViewById(R.id.select_2).setOnClickListener(v -> ImageUtils.requestImage(CP4Activity.this, REQUEST_IMAGE_2));
+        findViewById(R.id.select_1).setOnClickListener(v -> ImageUtils.requestImage(FilterActivity.this, REQUEST_IMAGE));
+        findViewById(R.id.select_2).setOnClickListener(v -> ImageUtils.requestImage(FilterActivity.this, REQUEST_IMAGE_2));
         findViewById(R.id.transform_1).setOnClickListener(v -> {
             adaptiveThreshold();
         });

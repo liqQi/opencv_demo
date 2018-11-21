@@ -31,14 +31,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CP3Activity extends AppCompatActivity {
+public class SimpleTransFormActivity extends AppCompatActivity {
 
-    private static final String TAG = CP3Activity.class.getSimpleName();
+    private static final String TAG = SimpleTransFormActivity.class.getSimpleName();
     private ImageView ivSrc2;
     private EditText etScale;
 
     public static void launch(Context context) {
-        Intent intent = new Intent(context, CP3Activity.class);
+        Intent intent = new Intent(context, SimpleTransFormActivity.class);
 
         context.startActivity(intent);
     }

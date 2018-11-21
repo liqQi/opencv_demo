@@ -15,7 +15,7 @@ import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.Scalar;
 
-public class CP1Activity extends AppCompatActivity {
+public class MatCreateActivity extends AppCompatActivity {
 
     private EditText etWidth;
     private EditText etHeight;
@@ -24,7 +24,7 @@ public class CP1Activity extends AppCompatActivity {
     private ImageView iv;
 
     public static void launch(Context context){
-        Intent intent = new Intent(context,CP1Activity.class);
+        Intent intent = new Intent(context,MatCreateActivity.class);
         context.startActivity(intent);
     }
 

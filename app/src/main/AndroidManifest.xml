@@ -23,19 +23,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CP1Activity"
+            android:name=".MatCreateActivity"
             android:label="@string/lable_cp2"/>
         <activity
-            android:name=".CP3Activity"
+            android:name=".SimpleTransFormActivity"
             android:label="@string/lable_cp3">
         </activity>
         <activity
-            android:name=".CP4Activity"
+            android:name=".FilterActivity"
             android:label="@string/lable_cp4"/>
-        <activity android:name=".CP5Activity"/>
+        <activity android:name=".FeatureDetectionActivity"/>
         <activity
             android:screenOrientation="landscape"
-            android:name=".CameraActivity"
+            android:name=".SimpleFaceDetectActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="相机"
             android:theme="@style/AppTheme.NoActionBar"/>

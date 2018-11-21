@@ -7,23 +7,23 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
-            android:title="第二章"/>
+            android:title="Mat"/>
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="第三章"/>
+            android:title="图像变换"/>
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="第四章"/>
+            android:title="滤波"/>
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools"/>
+            android:title="特征检测"/>
         <item
             android:id="@+id/camera"
             android:icon="@drawable/ic_menu_manage"
-            android:title="camera"/>
+            android:title="人脸识别"/>
     </group>
 
     <item android:title="Communicate">
