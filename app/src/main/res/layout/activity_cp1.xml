@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".CP1Activity">
+    <EditText
+        android:id="@+id/width"
+        android:inputType="number"
+        android:hint="宽"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/height"
+        android:inputType="number"
+        android:hint="高"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/color"
+        android:inputType="number"
+        android:hint="颜色"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/create"
+        android:text="创造"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/iv"
+        android:scaleType="centerInside"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"/>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.honeybilly.opencvdemo"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CP1Activity"
+            android:label="@string/lable_cp2"/>
+        <activity
+            android:name=".CP3Activity"
+            android:label="@string/lable_cp3">
+        </activity>
+        <activity
+            android:name=".CP4Activity"
+            android:label="@string/lable_cp4"/>
+        <activity android:name=".CP5Activity"/>
+        <activity
+            android:screenOrientation="landscape"
+            android:name=".CameraActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="相机"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>

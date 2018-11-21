@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/space_virtical"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/switchCamera"
+            style="@style/TextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="切换"/>
+
+        <TextView
+            android:id="@+id/filter"
+            style="@style/TextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="滤镜"/>
+    </LinearLayout>
+</FrameLayout>

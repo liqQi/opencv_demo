@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main2">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/transform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转换"/>
+
+            <Button
+                android:id="@+id/get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="获取图片"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="80dp"
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"/>
+        <ImageView
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/iv"
+            android:id="@+id/iv_transform"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
